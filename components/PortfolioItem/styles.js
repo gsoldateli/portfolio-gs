@@ -39,8 +39,9 @@ export const Subtitle = styled.h4`
 
 export const ButtonsWrapper = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  flex-flow: row wrap;
 `;
 
 export const MockupImg = styled.img`
@@ -62,6 +63,6 @@ export const TechsWrapper = styled.div`
 
 export const VerticalWrapper = styled.div`
   display: grid;
-  grid-template-columns: 260px 278px;
+  grid-template-columns: 35% calc(65% - 4rem);
   grid-column-gap: 4rem;
 `;

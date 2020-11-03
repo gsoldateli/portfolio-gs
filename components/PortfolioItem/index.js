@@ -1,6 +1,8 @@
 import React from "react";
 // import { Description } from "../Intro/styles";
 
+import Button, { SecondaryButton } from "../Button";
+
 import {
   Background,
   Title,
@@ -43,11 +45,8 @@ function PortfolioItem({
 
                 <Description>{description}</Description>
                 <ButtonsWrapper>
-                  <img
-                    src="http://i.imgur.com/T1hmz8S.png"
-                    className="buttons"
-                    style={{ width: "100%" }}
-                  />
+                  <Button style={{ color: "blue", marginRight: "1rem" }} />
+                  <SecondaryButton />
                 </ButtonsWrapper>
                 <TechsWrapper>
                   <Subtitle>Technologies used</Subtitle>
