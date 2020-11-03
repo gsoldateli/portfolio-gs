@@ -1,65 +1,73 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Head from "next/head";
+import styled from "styled-components";
+import Intro from "../components/Intro";
+import PortfolioItem from "../components/PortfolioItem";
+
+const IntroWrapper = styled.aside`
+  height: 100vh;
+  width: 40%;
+  background-color: ${({ theme }) => theme.colors.mainBackground};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+`;
+
+const BackgroundImage = styled.img.attrs({
+  src: "/react-background.svg",
+})`
+  position: absolute;
+  right: 0;
+  top: 50%;
+  height: 50vh;
+  transform: translate3d(50%, -50%, 0);
+  height: 90vh;
+`;
+
+const ContentWrapper = styled.div`
+  overflow-x: hidden;
+  /* flex-grow: 1; */
+  width: 60%;
+  height: 100vh;
+`;
+
+const SectionsWrapper = styled.div`
+  display: flex;
+  flex-flow: row wrap;
+`;
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <>
       <Head>
-        <title>Create Next App</title>
+        <title>Guilherme Soldateli - Portfolio</title>
         <link rel="icon" href="/favicon.ico" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Asap:wght@700&display=swap"
+          rel="stylesheet"
+        ></link>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;700&display=swap"
+          rel="stylesheet"
+        ></link>
       </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
-  )
+      <SectionsWrapper>
+        <IntroWrapper>
+          <BackgroundImage />
+          <Intro containerStyles={{ zIndex: 1000 }} />
+        </IntroWrapper>
+        <ContentWrapper>
+          <PortfolioItem
+            title="DIFUSÃO"
+            subtitle="Mobile Application"
+            mockupImgUrl="/smartphone-mockup.png"
+            description="Mobile application to scale farmer’s training on how to make the
+            best use of their farming supplies bought from Maná."
+            backgroundGradientColors={["#06a248", "#00893a"]}
+          />
+        </ContentWrapper>
+      </SectionsWrapper>
+    </>
+  );
 }
