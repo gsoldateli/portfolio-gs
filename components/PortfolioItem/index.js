@@ -18,6 +18,8 @@ import {
   VerticalWrapper,
   MockupImgMobile,
   HorizontalWrapper,
+  ButtonsWrapperHorizontal,
+  ContentWrapperHorizonal,
 } from "./styles";
 
 function PortfolioItem({
@@ -26,7 +28,8 @@ function PortfolioItem({
   title,
   subtitle,
   mockupImgUrl,
-  technologies = [],
+  techs = [],
+  accentColor = "pink",
   backgroundGradientColors,
 }) {
   const ContentWrapper =
@@ -40,37 +43,91 @@ function PortfolioItem({
       >
         <div>
           <ContentWrapper>
-            {type === "vertical" && <MockupImg src={mockupImgUrl} />}
+            <MockupImg src={mockupImgUrl} />
             <div>
               <Header>
                 <Title>{title}</Title>
                 <Client>{subtitle}</Client>
               </Header>
-              {type === "horizontal" && <MockupImg src={mockupImgUrl} />}
-              {type === "vertical" && <MockupImgMobile src={mockupImgUrl} />}
+
+              <MockupImgMobile src={mockupImgUrl} />
 
               <Description>{description}</Description>
+
               <ButtonsWrapper>
-                <Button style={{ color: "blue", marginRight: "1rem" }} />
+                <Button style={{ color: accentColor, marginRight: "1rem" }} />
                 <SecondaryButton />
               </ButtonsWrapper>
-              <TechsWrapper>
-                <Subtitle>Technologies used</Subtitle>
-                <TechBadge type="react-native" />
-                <TechBadge type="laravel" />
-                <TechBadge type="expo" />
+              {techs.length > 0 && (
+                <TechsWrapper style={{ marginTop: "4rem" }}>
+                  <Subtitle>Technologies used</Subtitle>
+                  {techs.map((tech) => (
+                    <TechBadge key={tech} type={tech} />
+                  ))}
 
-                <TechBadge type="javascript" />
-                <TechBadge type="styled-components" />
+                  {/* 
+                  <TechBadge type="laravel" />
+                  <TechBadge type="expo" />
 
-                {/* <img
-                    src="http://i.imgur.com/3mXLuSq.png"
-                    className="techs"
-                    style={{ width: "100%" }}
-                  /> */}
-              </TechsWrapper>
+                  <TechBadge type="javascript" />
+                  <TechBadge type="styled-components" /> */}
+                </TechsWrapper>
+              )}
             </div>
           </ContentWrapper>
+
+          {/* <RolesWrapper>
+            <Subtitle>My services</Subtitle>
+          </RolesWrapper> */}
+        </div>
+      </Background>
+    </>
+  );
+}
+
+export function HorizontalPorfolioItem({
+  description,
+  title,
+  subtitle,
+  mockupImgUrl,
+  accentColor = "pink",
+  techs = [],
+  backgroundGradientColors,
+}) {
+  return (
+    <>
+      <Background
+        style={{
+          background: `radial-gradient( 27.62% 37.27% at 50% 37.27%,${backgroundGradientColors[0]} 0%,${backgroundGradientColors[1]} 100% )`,
+        }}
+      >
+        <div>
+          <HorizontalWrapper>
+            <div>
+              <Header>
+                <Title>{title}</Title>
+                <Client>{subtitle}</Client>
+              </Header>
+
+              <MockupImg src={mockupImgUrl} />
+
+              <Description>{description}</Description>
+
+              <ButtonsWrapperHorizontal>
+                <Button style={{ color: accentColor, marginRight: "1rem" }} />
+                <SecondaryButton />
+              </ButtonsWrapperHorizontal>
+
+              {techs.length > 0 && (
+                <TechsWrapper>
+                  <Subtitle>Technologies used</Subtitle>
+                  {techs.map((tech) => (
+                    <TechBadge key={tech} type={tech} />
+                  ))}
+                </TechsWrapper>
+              )}
+            </div>
+          </HorizontalWrapper>
 
           {/* <RolesWrapper>
             <Subtitle>My services</Subtitle>

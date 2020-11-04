@@ -3,6 +3,10 @@ import React from "react";
 import { Container, Icon } from "./styles";
 
 const types = {
+  react: {
+    label: "React",
+    icon: "react.png",
+  },
   "react-native": {
     label: "React Native",
     icon: "react.png",

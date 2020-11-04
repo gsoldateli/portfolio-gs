@@ -8,7 +8,7 @@ export const Background = styled.div`
     #00893a 100%
   );
   width: 100%;
-  padding: 15%;
+  padding: 11.4%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -50,6 +50,12 @@ export const ButtonsWrapper = styled.div`
   }
 `;
 
+export const ButtonsWrapperHorizontal = styled(ButtonsWrapper)`
+  /* justify-content: center; */
+  align-items: center;
+  margin-bottom: 4rem;
+`;
+
 export const MockupImg = styled.img`
   width: 100%;
   height: auto;
@@ -59,12 +65,22 @@ export const MockupImg = styled.img`
   }
 `;
 
+export const ContentWrapperHorizonal = styled.div`
+  /* display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-column-gap: 4rem; */
+
+  display: flex;
+  flex-flow: column wrap;
+`;
+
 export const MockupImgMobile = styled(MockupImg)`
   display: none;
 
   margin: 4rem auto 2rem auto;
   @media (max-width: 1440px) and (min-width: 1280px), (max-width: 860px) {
     display: block;
+    max-width: 45%;
   }
 `;
 
@@ -76,7 +92,7 @@ export const Header = styled.div`
 export const RolesWrapper = styled.div``;
 
 export const TechsWrapper = styled.div`
-  margin-top: 4rem;
+  /* margin-top: 4rem; */
 `;
 
 export const VerticalWrapper = styled.div`

@@ -2,7 +2,9 @@ import Head from "next/head";
 import styled from "styled-components";
 import Intro from "../components/Intro";
 import Footer from "../components/Footer";
-import PortfolioItem from "../components/PortfolioItem";
+import PortfolioItem, {
+  HorizontalPorfolioItem,
+} from "../components/PortfolioItem";
 
 const IntroWrapper = styled.aside`
   width: 100%;
@@ -66,21 +68,70 @@ export default function Home() {
         </IntroWrapper>
         <ContentWrapper>
           <PortfolioItem
+            title="Sweet Labs Store"
+            subtitle="Candy ordering web application"
+            mockupImgUrl="/maodoce-mockup.png"
+            description="Mobile application to scale farmer’s training on how to make the
+            best use of their farming supplies bought from Maná."
+            techs={[
+              "react-native",
+              "laravel",
+              "expo",
+              "styled-components",
+              "javascript",
+            ]}
+            backgroundGradientColors={["#f32b29", "#f52220"]}
+            accentColor="#f32b29"
+          />
+          <PortfolioItem
             title="DIFUSÃO"
             subtitle="Mobile Application"
             mockupImgUrl="/smartphone-mockup.png"
             description="Mobile application to scale farmer’s training on how to make the
             best use of their farming supplies bought from Maná."
+            techs={[
+              "react-native",
+              "laravel",
+              "expo",
+              "styled-components",
+              "javascript",
+            ]}
             backgroundGradientColors={["#06a248", "#00893a"]}
+            accentColor="#06A148"
           />
-          <PortfolioItem
+
+          <HorizontalPorfolioItem
+            title="CARVALHAES"
+            subtitle="Chemical supplies E-commerce"
+            mockupImgUrl="/carvalhaes-mockup.png"
+            description="Mobile application to scale farmer’s training on how to make the
+            best use of their farming supplies bought from Maná."
+            techs={[
+              "react-native",
+              "laravel",
+              "expo",
+              "styled-components",
+              "javascript",
+            ]}
+            backgroundGradientColors={["#2a6de8", "#104bb7"]}
+            accentColor="#104bb7"
+          />
+
+          <HorizontalPorfolioItem
             title="DIFUSÃO"
             subtitle="SPA Admin Panel"
             mockupImgUrl="/laptop-mockup.png"
             description="Mobile application to scale farmer’s training on how to make the
             best use of their farming supplies bought from Maná."
+            techs={[
+              "react-native",
+              "laravel",
+              "expo",
+              "styled-components",
+              "javascript",
+            ]}
             backgroundGradientColors={["#5EBB55", "#55B44C"]}
-            type="horizontal"
+            accentColor="#5bb554"
           />
           <PortfolioItem
             title="SUPERLIVERY"
@@ -88,9 +139,17 @@ export default function Home() {
             mockupImgUrl="/smartphone-mockup.png"
             description="Mobile application to scale farmer’s training on how to make the
             best use of their farming supplies bought from Maná."
+            techs={[
+              "react-native",
+              "laravel",
+              "expo",
+              "styled-components",
+              "javascript",
+            ]}
             backgroundGradientColors={["#E91855", "#E2164E"]}
-            type="vertical"
+            accentColor="#F20E5C"
           />
+
           <Footer />
         </ContentWrapper>
       </SectionsWrapper>
