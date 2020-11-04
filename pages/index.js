@@ -73,6 +73,24 @@ export default function Home() {
             best use of their farming supplies bought from Maná."
             backgroundGradientColors={["#06a248", "#00893a"]}
           />
+          <PortfolioItem
+            title="DIFUSÃO"
+            subtitle="SPA Admin Panel"
+            mockupImgUrl="/laptop-mockup.png"
+            description="Mobile application to scale farmer’s training on how to make the
+            best use of their farming supplies bought from Maná."
+            backgroundGradientColors={["#5EBB55", "#55B44C"]}
+            type="horizontal"
+          />
+          <PortfolioItem
+            title="SUPERLIVERY"
+            subtitle="Mobile Application"
+            mockupImgUrl="/smartphone-mockup.png"
+            description="Mobile application to scale farmer’s training on how to make the
+            best use of their farming supplies bought from Maná."
+            backgroundGradientColors={["#E91855", "#E2164E"]}
+            type="vertical"
+          />
           <Footer />
         </ContentWrapper>
       </SectionsWrapper>

@@ -42,6 +42,12 @@ export const ButtonsWrapper = styled.div`
   justify-content: flex-start;
   align-items: center;
   flex-flow: row wrap;
+
+  @media (max-width: 404px) {
+    a:first-child {
+      margin-bottom: 1rem;
+    }
+  }
 `;
 
 export const MockupImg = styled.img`
@@ -80,5 +86,16 @@ export const VerticalWrapper = styled.div`
 
   @media (max-width: 1440px) and (min-width: 1280px), (max-width: 860px) {
     grid-template-columns: 100%;
+  }
+`;
+
+export const HorizontalWrapper = styled(VerticalWrapper)`
+  grid-template-columns: 100% !important;
+  grid-column-gap: 0;
+
+  ${MockupImg} {
+    max-width: 80%;
+    margin: 4rem auto 2rem auto;
+    display: block;
   }
 `;

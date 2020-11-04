@@ -17,6 +17,7 @@ import {
   TechsWrapper,
   VerticalWrapper,
   MockupImgMobile,
+  HorizontalWrapper,
 } from "./styles";
 
 function PortfolioItem({
@@ -28,6 +29,8 @@ function PortfolioItem({
   technologies = [],
   backgroundGradientColors,
 }) {
+  const ContentWrapper =
+    type === "vertical" ? VerticalWrapper : HorizontalWrapper;
   return (
     <>
       <Background
@@ -36,38 +39,39 @@ function PortfolioItem({
         }}
       >
         <div>
-          {type === "vertical" && (
-            <VerticalWrapper>
-              <MockupImg src={mockupImgUrl} />
-              <div>
-                <Header>
-                  <Title>{title}</Title>
-                  <Client>{subtitle}</Client>
-                </Header>
+          <ContentWrapper>
+            {type === "vertical" && <MockupImg src={mockupImgUrl} />}
+            <div>
+              <Header>
+                <Title>{title}</Title>
+                <Client>{subtitle}</Client>
+              </Header>
+              {type === "horizontal" && <MockupImg src={mockupImgUrl} />}
+              {type === "vertical" && <MockupImgMobile src={mockupImgUrl} />}
 
-                <MockupImgMobile src={mockupImgUrl} />
+              <Description>{description}</Description>
+              <ButtonsWrapper>
+                <Button style={{ color: "blue", marginRight: "1rem" }} />
+                <SecondaryButton />
+              </ButtonsWrapper>
+              <TechsWrapper>
+                <Subtitle>Technologies used</Subtitle>
+                <TechBadge type="react-native" />
+                <TechBadge type="laravel" />
+                <TechBadge type="expo" />
 
-                <Description>{description}</Description>
-                <ButtonsWrapper>
-                  <Button style={{ color: "blue", marginRight: "1rem" }} />
-                  <SecondaryButton />
-                </ButtonsWrapper>
-                <TechsWrapper>
-                  <Subtitle>Technologies used</Subtitle>
-                  <TechBadge type="react-native" />
-                  <TechBadge type="laravel" />
-                  <TechBadge type="styled-components" />
-                  <TechBadge type="javascript" />
-                  <TechBadge type="expo" />
-                  {/* <img
+                <TechBadge type="javascript" />
+                <TechBadge type="styled-components" />
+
+                {/* <img
                     src="http://i.imgur.com/3mXLuSq.png"
                     className="techs"
                     style={{ width: "100%" }}
                   /> */}
-                </TechsWrapper>
-              </div>
-            </VerticalWrapper>
-          )}
+              </TechsWrapper>
+            </div>
+          </ContentWrapper>
+
           {/* <RolesWrapper>
             <Subtitle>My services</Subtitle>
           </RolesWrapper> */}
