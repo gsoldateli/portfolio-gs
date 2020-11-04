@@ -28,6 +28,7 @@ export const Description = styled.p`
   color: #fff;
   font-weight: 100;
   margin-bottom: 2rem;
+  font-size: 1rem;
 `;
 
 export const Subtitle = styled.h4`
@@ -39,8 +40,8 @@ export const Subtitle = styled.h4`
 
 export const ButtonsWrapper = styled.div`
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  /* justify-content: flex-start; */
+  align-items: flex-start;
   flex-flow: row wrap;
 
   @media (max-width: 404px) {
@@ -51,7 +52,7 @@ export const ButtonsWrapper = styled.div`
 `;
 
 export const ButtonsWrapperHorizontal = styled(ButtonsWrapper)`
-  /* justify-content: center; */
+  justify-content: flex-start;
   align-items: center;
   margin-bottom: 4rem;
 `;

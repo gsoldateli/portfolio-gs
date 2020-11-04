@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  padding: 0.3rem 0.8rem;
+  padding: 0.5rem 0.8rem;
   background-color: rgba(0, 0, 0, 0.35);
   border-radius: 2rem;
   color: #fff;
@@ -12,7 +12,7 @@ export const Container = styled.div`
   justify-content: space-between;
   margin-bottom: 0.5rem;
   margin-right: 0.5rem;
-  font-size: 16px;
+  font-size: 1rem;
 `;
 
 export const Icon = styled.img`

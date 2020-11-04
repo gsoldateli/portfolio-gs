@@ -27,10 +27,13 @@ function Intro({ containerStyles = {} }) {
         </p>
       </Description>
       <SocialMediaContainer>
-        <SocialMediaIcon href="http://www.google.com">
+        <SocialMediaIcon target="_github" href="https://github.com/gsoldateli">
           <img src="social/github.svg" />
         </SocialMediaIcon>
-        <SocialMediaIcon href="http://www.google.com">
+        <SocialMediaIcon
+          target="_linkedin"
+          href="https://www.linkedin.com/in/gsoldateli/"
+        >
           <img src="social/linkedin.svg" />
         </SocialMediaIcon>
         <SocialMediaIcon href="http://www.google.com">

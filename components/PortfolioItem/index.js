@@ -12,14 +12,12 @@ import {
   Description,
   MockupImg,
   Header,
-  RolesWrapper,
   ButtonsWrapper,
   TechsWrapper,
   VerticalWrapper,
   MockupImgMobile,
   HorizontalWrapper,
   ButtonsWrapperHorizontal,
-  ContentWrapperHorizonal,
 } from "./styles";
 
 function PortfolioItem({
@@ -31,9 +29,9 @@ function PortfolioItem({
   techs = [],
   accentColor = "pink",
   backgroundGradientColors,
+  mainButtonProps = null,
+  secondaryButtonProps = null,
 }) {
-  const ContentWrapper =
-    type === "vertical" ? VerticalWrapper : HorizontalWrapper;
   return (
     <>
       <Background
@@ -42,7 +40,7 @@ function PortfolioItem({
         }}
       >
         <div>
-          <ContentWrapper>
+          <VerticalWrapper>
             <MockupImg src={mockupImgUrl} />
             <div>
               <Header>
@@ -55,8 +53,23 @@ function PortfolioItem({
               <Description>{description}</Description>
 
               <ButtonsWrapper>
-                <Button style={{ color: accentColor, marginRight: "1rem" }} />
-                <SecondaryButton />
+                {mainButtonProps && (
+                  <Button
+                    {...mainButtonProps}
+                    style={{
+                      ...mainButtonProps.style,
+                      color: accentColor,
+                      marginRight: "1rem",
+                    }}
+                  >
+                    {mainButtonProps.text}
+                  </Button>
+                )}
+                {secondaryButtonProps && (
+                  <SecondaryButton {...secondaryButtonProps}>
+                    {secondaryButtonProps.text}
+                  </SecondaryButton>
+                )}
               </ButtonsWrapper>
               {techs.length > 0 && (
                 <TechsWrapper style={{ marginTop: "4rem" }}>
@@ -64,17 +77,10 @@ function PortfolioItem({
                   {techs.map((tech) => (
                     <TechBadge key={tech} type={tech} />
                   ))}
-
-                  {/* 
-                  <TechBadge type="laravel" />
-                  <TechBadge type="expo" />
-
-                  <TechBadge type="javascript" />
-                  <TechBadge type="styled-components" /> */}
                 </TechsWrapper>
               )}
             </div>
-          </ContentWrapper>
+          </VerticalWrapper>
 
           {/* <RolesWrapper>
             <Subtitle>My services</Subtitle>
@@ -93,6 +99,8 @@ export function HorizontalPorfolioItem({
   accentColor = "pink",
   techs = [],
   backgroundGradientColors,
+  mainButtonProps,
+  secondaryButtonProps,
 }) {
   return (
     <>
@@ -112,10 +120,24 @@ export function HorizontalPorfolioItem({
               <MockupImg src={mockupImgUrl} />
 
               <Description>{description}</Description>
-
               <ButtonsWrapperHorizontal>
-                <Button style={{ color: accentColor, marginRight: "1rem" }} />
-                <SecondaryButton />
+                {mainButtonProps && (
+                  <Button
+                    {...mainButtonProps}
+                    style={{
+                      ...mainButtonProps.style,
+                      color: accentColor,
+                      marginRight: "1rem",
+                    }}
+                  >
+                    {mainButtonProps.text}
+                  </Button>
+                )}
+                {secondaryButtonProps && (
+                  <SecondaryButton {...secondaryButtonProps}>
+                    {secondaryButtonProps.text}
+                  </SecondaryButton>
+                )}
               </ButtonsWrapperHorizontal>
 
               {techs.length > 0 && (

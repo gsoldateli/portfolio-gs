@@ -26,10 +26,7 @@ const Text = styled.span`
 function Footer() {
   return (
     <Wrapper>
-      <Text>
-        © 2020 Coded by Guilherme Soldateli. Design inspired by{" "}
-        <a href="http://charliewaite.me/">Charlie Waite</a>
-      </Text>
+      <Text>© 2020 Developed by Guilherme Soldateli.</Text>
     </Wrapper>
   );
 }

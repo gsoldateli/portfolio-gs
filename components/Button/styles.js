@@ -9,6 +9,7 @@ const ContainerBase = styled.a`
   align-items: center;
   justify-content: center;
   min-height: 3rem;
+  text-decoration: none;
 `;
 
 export const SecondaryContainer = styled(ContainerBase)`
@@ -26,14 +27,22 @@ export const IconWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  transition: transform 0.3s;
 `;
 
 export const Container = styled(ContainerBase)`
   background-color: #fff;
   color: pink;
-  /* color: ${(props) => props.color}; */
   font-size: 1rem;
   font-weight: bold;
+  /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 12px rgba(0, 0, 0, 0.25); */
+
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 12px rgba(0, 0, 0, 0.25);
-  /* white-space: nowrap; */
+
+  &:hover {
+    ${IconWrapper} {
+      transform: rotateX(360deg);
+    }
+  }
 `;

@@ -3,19 +3,19 @@ import React from "react";
 import { Play as PlayIcon } from "../Icon";
 import { Container, IconWrapper, SecondaryContainer } from "./styles";
 
-function Button({ style, icon }) {
+function Button({ children, style, icon, ...rest }) {
   return (
-    <Container style={style}>
+    <Container {...rest} style={style}>
       <IconWrapper>
         <PlayIcon />
       </IconWrapper>
-      Live Demo
+      {children}
     </Container>
   );
 }
 
-export const SecondaryButton = () => {
-  return <SecondaryContainer>See the code</SecondaryContainer>;
+export const SecondaryButton = ({ children, ...rest }) => {
+  return <SecondaryContainer {...rest}>{children}</SecondaryContainer>;
 };
 
 export default Button;

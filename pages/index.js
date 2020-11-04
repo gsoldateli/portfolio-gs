@@ -50,7 +50,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Guilherme Soldateli - Portfolio</title>
+        <title>Portfolio - Guilherme Soldateli</title>
         <link rel="icon" href="/favicon.ico" />
         <link
           href="https://fonts.googleapis.com/css2?family=Asap:wght@700&display=swap"
@@ -71,33 +71,26 @@ export default function Home() {
             title="Sweet Labs Store"
             subtitle="Candy ordering web application"
             mockupImgUrl="/maodoce-mockup.png"
+            mainButtonProps={{
+              href: "https://encomendas.maodoce.com.br",
+              text: "Make an order",
+            }}
+            secondaryButtonProps={{
+              href: "https://google.com",
+              text: "Walk through",
+            }}
             description="Mobile application to scale farmer’s training on how to make the
             best use of their farming supplies bought from Maná."
             techs={[
-              "react-native",
+              "react",
               "laravel",
               "expo",
               "styled-components",
               "javascript",
             ]}
-            backgroundGradientColors={["#f32b29", "#f52220"]}
-            accentColor="#f32b29"
-          />
-          <PortfolioItem
-            title="DIFUSÃO"
-            subtitle="Mobile Application"
-            mockupImgUrl="/smartphone-mockup.png"
-            description="Mobile application to scale farmer’s training on how to make the
-            best use of their farming supplies bought from Maná."
-            techs={[
-              "react-native",
-              "laravel",
-              "expo",
-              "styled-components",
-              "javascript",
-            ]}
-            backgroundGradientColors={["#06a248", "#00893a"]}
-            accentColor="#06A148"
+            backgroundGradientColors={["#d32f2f", "#d32f2f"]}
+            accentColor="#f74f42
+            "
           />
 
           <HorizontalPorfolioItem
@@ -113,29 +106,17 @@ export default function Home() {
               "styled-components",
               "javascript",
             ]}
-            backgroundGradientColors={["#2a6de8", "#104bb7"]}
-            accentColor="#104bb7"
+            backgroundGradientColors={["#1868a7", "#01579b"]}
+            accentColor="#01579b"
+            mainButtonProps={{
+              href: "https://www.carvalhaes.net/",
+              text: "See Live",
+            }}
           />
 
-          <HorizontalPorfolioItem
-            title="DIFUSÃO"
-            subtitle="SPA Admin Panel"
-            mockupImgUrl="/laptop-mockup.png"
-            description="Mobile application to scale farmer’s training on how to make the
-            best use of their farming supplies bought from Maná."
-            techs={[
-              "react-native",
-              "laravel",
-              "expo",
-              "styled-components",
-              "javascript",
-            ]}
-            backgroundGradientColors={["#5EBB55", "#55B44C"]}
-            accentColor="#5bb554"
-          />
           <PortfolioItem
-            title="SUPERLIVERY"
-            subtitle="Mobile Application"
+            title="DIFUSÃO"
+            subtitle="Customer relationship mobile Application"
             mockupImgUrl="/smartphone-mockup.png"
             description="Mobile application to scale farmer’s training on how to make the
             best use of their farming supplies bought from Maná."
@@ -146,8 +127,65 @@ export default function Home() {
               "styled-components",
               "javascript",
             ]}
-            backgroundGradientColors={["#E91855", "#E2164E"]}
+            backgroundGradientColors={["#06a248", "#00893a"]}
+            accentColor="#06A148"
+            mainButtonProps={{
+              href: "https://google.com",
+              text: "See it working",
+            }}
+            // secondaryButtonProps={{
+            //   href: "https://google.com",
+            //   text: "Walk through",
+            // }}
+          />
+          <PortfolioItem
+            title="SUPERLIVERY"
+            subtitle="Supermarket delivery mobile Application"
+            mockupImgUrl="/superlivery-mockup.png"
+            description="Mobile application to scale farmer’s training on how to make the
+            best use of their farming supplies bought from Maná."
+            techs={[
+              "react-native",
+              "laravel",
+              "expo",
+              "styled-components",
+              "javascript",
+            ]}
+            backgroundGradientColors={["#d81b60", "#d81b60"]}
             accentColor="#F20E5C"
+            mainButtonProps={{
+              href:
+                "https://play.google.com/store/apps/details?id=com.superlivery.superlivery",
+              text: "Play Store",
+            }}
+            secondaryButtonProps={{
+              href: "https://google.com",
+              text: "Walkt through",
+            }}
+          />
+          <HorizontalPorfolioItem
+            title="DIFUSÃO"
+            subtitle="Single Page Application Admin Dashboard"
+            mockupImgUrl="/laptop-mockup.png"
+            description="Mobile application to scale farmer’s training on how to make the
+            best use of their farming supplies bought from Maná."
+            techs={[
+              "react-native",
+              "laravel",
+              "expo",
+              "styled-components",
+              "javascript",
+            ]}
+            backgroundGradientColors={["#3b9240", "#2e7d32"]}
+            accentColor="#2e7d32"
+            mainButtonProps={{
+              href: "https://google.com",
+              text: "See in action",
+            }}
+            // secondaryButtonProps={{
+            //   href: "https://google.com",
+            //   text: "Walk through",
+            // }}
           />
 
           <Footer />
