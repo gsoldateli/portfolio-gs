@@ -8,7 +8,7 @@ export const Background = styled.div`
     #00893a 100%
   );
   width: 100%;
-  padding: min(10%, 7.11rem);
+  padding: 15%;
   display: flex;
   align-items: center;
   justify-content: center;

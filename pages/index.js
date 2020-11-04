@@ -1,6 +1,7 @@
 import Head from "next/head";
 import styled from "styled-components";
 import Intro from "../components/Intro";
+import Footer from "../components/Footer";
 import PortfolioItem from "../components/PortfolioItem";
 
 const IntroWrapper = styled.aside`
@@ -72,6 +73,7 @@ export default function Home() {
             best use of their farming supplies bought from Maná."
             backgroundGradientColors={["#06a248", "#00893a"]}
           />
+          <Footer />
         </ContentWrapper>
       </SectionsWrapper>
     </>

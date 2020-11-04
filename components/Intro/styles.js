@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  padding: 13%;
+  padding: 15%;
 
   width: 100%;
 `;
@@ -51,7 +51,7 @@ export const Button = styled.a`
   padding: 1rem 2rem;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 10px rgba(0, 0, 0, 0.25);
   border-radius: 2rem;
-
+  display: inline-block;
   transition: box-shadow 0.3s, background-color 0.3s;
 
   &:hover {

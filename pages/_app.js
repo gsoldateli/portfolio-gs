@@ -60,6 +60,10 @@ html {
 	font-size: 18px;
 	font-family: 'Nunito';
 	color: ${theme.colors.text};
+
+	@media(max-width: 480px) {
+		font-size: 16px;
+	}
 }
 
 a {
