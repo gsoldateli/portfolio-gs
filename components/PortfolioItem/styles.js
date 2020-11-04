@@ -8,7 +8,7 @@ export const Background = styled.div`
     #00893a 100%
   );
   width: 100%;
-  padding: 7.11rem;
+  padding: min(10%, 7.11rem);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -48,6 +48,18 @@ export const MockupImg = styled.img`
   width: 100%;
   height: auto;
   max-width: 360px;
+  @media (max-width: 1440px) and (min-width: 1280px), (max-width: 860px) {
+    display: none;
+  }
+`;
+
+export const MockupImgMobile = styled(MockupImg)`
+  display: none;
+
+  margin: 4rem auto 2rem auto;
+  @media (max-width: 1440px) and (min-width: 1280px), (max-width: 860px) {
+    display: block;
+  }
 `;
 
 export const Header = styled.div`
@@ -63,6 +75,10 @@ export const TechsWrapper = styled.div`
 
 export const VerticalWrapper = styled.div`
   display: grid;
-  grid-template-columns: 35% calc(65% - 4rem);
+  grid-template-columns: minmax(260px, 340px) calc(65% - 4rem);
   grid-column-gap: 4rem;
+
+  @media (max-width: 1440px) and (min-width: 1280px), (max-width: 860px) {
+    grid-template-columns: 100%;
+  }
 `;

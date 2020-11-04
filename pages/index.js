@@ -4,8 +4,11 @@ import Intro from "../components/Intro";
 import PortfolioItem from "../components/PortfolioItem";
 
 const IntroWrapper = styled.aside`
-  height: 100vh;
-  width: 40%;
+  width: 100%;
+  @media (min-width: 1280px) {
+    height: 100vh;
+    width: 40%;
+  }
   background-color: ${({ theme }) => theme.colors.mainBackground};
   display: flex;
   align-items: center;
@@ -28,8 +31,11 @@ const BackgroundImage = styled.img.attrs({
 const ContentWrapper = styled.div`
   overflow-x: hidden;
   /* flex-grow: 1; */
-  width: 60%;
-  height: 100vh;
+  width: 100%;
+  @media (min-width: 1280px) {
+    width: 60%;
+    height: 100vh;
+  }
 `;
 
 const SectionsWrapper = styled.div`

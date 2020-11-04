@@ -15,7 +15,7 @@ function Button({ style, icon }) {
 }
 
 export const SecondaryButton = () => {
-  return <SecondaryContainer>Secondary</SecondaryContainer>;
+  return <SecondaryContainer>See the code</SecondaryContainer>;
 };
 
 export default Button;

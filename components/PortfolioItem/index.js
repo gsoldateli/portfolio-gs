@@ -2,6 +2,7 @@ import React from "react";
 // import { Description } from "../Intro/styles";
 
 import Button, { SecondaryButton } from "../Button";
+import TechBadge from "../TechBadge";
 
 import {
   Background,
@@ -15,6 +16,7 @@ import {
   ButtonsWrapper,
   TechsWrapper,
   VerticalWrapper,
+  MockupImgMobile,
 } from "./styles";
 
 function PortfolioItem({
@@ -43,6 +45,8 @@ function PortfolioItem({
                   <Client>{subtitle}</Client>
                 </Header>
 
+                <MockupImgMobile src={mockupImgUrl} />
+
                 <Description>{description}</Description>
                 <ButtonsWrapper>
                   <Button style={{ color: "blue", marginRight: "1rem" }} />
@@ -50,18 +54,23 @@ function PortfolioItem({
                 </ButtonsWrapper>
                 <TechsWrapper>
                   <Subtitle>Technologies used</Subtitle>
-                  <img
+                  <TechBadge type="react-native" />
+                  <TechBadge type="laravel" />
+                  <TechBadge type="styled-components" />
+                  <TechBadge type="javascript" />
+                  <TechBadge type="expo" />
+                  {/* <img
                     src="http://i.imgur.com/3mXLuSq.png"
                     className="techs"
                     style={{ width: "100%" }}
-                  />
+                  /> */}
                 </TechsWrapper>
               </div>
             </VerticalWrapper>
           )}
-          <RolesWrapper>
+          {/* <RolesWrapper>
             <Subtitle>My services</Subtitle>
-          </RolesWrapper>
+          </RolesWrapper> */}
         </div>
       </Background>
     </>
